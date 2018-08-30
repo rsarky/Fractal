@@ -14,15 +14,15 @@ class Fractal extends JPanel{
     private double imaginary;
 
     Fractal(){
-        HEIGHT      =     400;
-        WIDTH       =     640;
+        HEIGHT      =     720;
+        WIDTH       =     1280;
         IMG_WIDTH   =     WIDTH;
         IMG_HEIGHT  =     HEIGHT;
         real        =     -0.8;
         imaginary   =     0.156;
         c           =     new ComplexNumber(real, imaginary);
-        maxiter     =     256;
-        blowup      =     2;
+        maxiter     =     400;
+        blowup      =     4;
         setBackground(Color.BLACK);
         setPreferredSize(new Dimension(WIDTH,HEIGHT));
 
