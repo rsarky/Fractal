@@ -14,8 +14,8 @@ class Fractal extends JPanel{
     private double imaginary;
 
     Fractal(){
-        HEIGHT      =     720;
-        WIDTH       =     1280;
+        HEIGHT      =     600;
+        WIDTH       =     800;
         IMG_WIDTH   =     WIDTH;
         IMG_HEIGHT  =     HEIGHT;
         real        =     -0.8;
