@@ -8,16 +8,12 @@ class Fractal extends JPanel{
     private ComplexNumber c;
     private int maxiter;
     private int blowup;
-    private int IMG_WIDTH;
-    private int IMG_HEIGHT;
     private double real;
     private double imaginary;
 
     Fractal(){
         HEIGHT      =     600;
         WIDTH       =     800;
-        IMG_WIDTH   =     WIDTH;
-        IMG_HEIGHT  =     HEIGHT;
         real        =     -0.8;
         imaginary   =     0.156;
         c           =     new ComplexNumber(real, imaginary);
@@ -42,11 +38,11 @@ class Fractal extends JPanel{
     }
 
     private Image drawFractal() {
-        BufferedImage img = new BufferedImage(IMG_WIDTH, IMG_HEIGHT, BufferedImage.TYPE_INT_ARGB);
-        for (int x = 0; x < IMG_WIDTH; x++) {
-            for (int y = 0; y < IMG_HEIGHT; y++) {
-                double X = map(x,0,IMG_WIDTH,-2.0,2.0);
-                double Y = map(y,0,IMG_HEIGHT,-1.0,1.0);
+        BufferedImage img = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_INT_ARGB);
+        for (int x = 0; x < WIDTH; x++) {
+            for (int y = 0; y < HEIGHT; y++) {
+                double X = map(x,0,WIDTH,-2.0,2.0);
+                double Y = map(y,0,HEIGHT,-1.0,1.0);
                 int color = getPixelColor(X,Y);
 
                 img.setRGB(x,y,color);
